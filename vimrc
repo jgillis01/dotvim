@@ -28,7 +28,7 @@ filetype plugin on
 
 set t_Co=256
 set background=dark
-colorscheme jellybeans
+colorscheme distinguished
 "let g:solarized_termtrans=1
 
 " Add dictionary completion
