@@ -61,11 +61,8 @@ if has("gui_running")
 	hi DiffText       guibg=#12457D guifg=#ED9000 gui=underline
 
 	" -> Menu
-	hi Pmenu          guibg=#140100 guifg=#660300 gui=none
-	hi PmenuSel       guibg=#F17A00 guifg=#4C0200 gui=none
-	hi PmenuSbar      guibg=#430300               gui=none
-	hi PmenuThumb     guibg=#720300               gui=none
-	hi PmenuSel       guibg=#F17A00 guifg=#4C0200 gui=none
+	hi Pmenu          guibg=#606060 guifg=#ffffff gui=none
+	hi PmenuSel       guibg=#eeeeee guifg=#101010 gui=none
 
 	" -> Tabs
 	hi TabLine        guibg=#141414 guifg=#1F1F1F gui=none

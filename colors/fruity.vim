@@ -1,0 +1,1 @@
+vim-colors/colors/fruity.vim
