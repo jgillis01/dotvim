@@ -57,6 +57,9 @@ let g:indent_guides_guide_size = 1
 " Add dictionary completion
 set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 
+" Store swap files in /tmp
+set directory=/tmp
+
 " Visualize tabs, trailing whitespaces and funny characters
 " http://www.reddit.com/r/programming/comments/9wlb7/proggitors_do_you_like_the_idea_of_indented/c0esam1
 " https://wincent.com/blog/making-vim-highlight-suspicious-characters
