@@ -1,41 +1,54 @@
+" initialize pathogen
 filetype off
 execute pathogen#infect()
 
+" Line numbering
 set number
 set relativenumber
+
+" auto-indent
 set ai
+
+" Tabbing
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
-set ruler
-set background=dark
-set cmdheight=1
-set laststatus=2
+
+" Start scrolling when the cursor is 3 lines from the bottom of the buffer
 set scrolloff=3
+
+" Allow the cursor to go anywhere in the buffer
 set virtualedit=all
+
+" command area height
+set cmdheight=1
 
 " Allow backspacing
 set backspace=indent,eol,start
 
 " Status line
+set laststatus=2
 set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)\ [%p%%]\ Buf:%n\ [%b][0x%B]
 
 " Disable clearing scrollback buffer when exiting vim
 set t_ti= t_te=
 
+" Searching
 set incsearch
 set hlsearch
 set ignorecase
-set cursorline
+
+" Recognize file types for syntax highlighting
 filetype plugin on
 
+" Colors
 set t_Co=256
 set background=light
 colorscheme summerfruit256
-let g:molokai_original = 1
+set cursorline
 
-"Indent guides
+" Indent guides settings
 hi IndentGuidesOdd  ctermbg=white
 hi IndentGuidesEven ctermbg=lightgrey
 let g:indent_guides_start_level = 2
@@ -53,8 +66,13 @@ set listchars=nbsp:¬,tab:»·,trail:·
 " Add dictionary to complete list
 :set complete-=k complete+=k
 
+" Turn on syntax highlighting
 syntax on
+
+" toggle search highlighting
 noremap <F4> :set hlsearch! <cr>
+
+" toggle Tagbar
 noremap <F8> :TagbarToggle <CR>
 
 " Escape insert mode
@@ -77,13 +95,14 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>e :edit %%
 map <leader>v :view %%
 
+" CtrlP Settings
 let g:ctrlp_map='<leader>f'
 let g:ctrlp_cmd='CtrlP'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-
 nnoremap <leader>b :CtrlPBuffer<cr>
 nnoremap <leader>u :CtrlPMRU<cr>
 
+" Get back to alt buffer
 nmap ,, <C-^>
 
 " contents of last global command in new window
@@ -99,6 +118,9 @@ nmap ,j :w\|!jsonlint % <CR>
 nmap :Q :q
 nmap :W :w
 
+" Completion menu styling
 highlight Pmenu ctermbg=238 gui=bold
 highlight PMenu gui=bold guibg=#CECECE guifg=#444444
+
+" get rid of the underline for the cursorline
 hi CursorLine cterm=none term=none
