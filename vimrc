@@ -45,7 +45,7 @@ filetype plugin on
 " Colors
 set t_Co=256
 set background=light
-colorscheme summerfruit256
+colorscheme thegoodluck
 set cursorline
 
 " Indent guides settings
@@ -121,9 +121,11 @@ nmap ,j :w\|!jsonlint % <CR>
 nmap :Q :q
 nmap :W :w
 
+" Get rid of trailing whitespace
+nmap ,de :%s= *$==<cr>
 " Completion menu styling
-highlight Pmenu ctermbg=238 gui=bold
+highlight Pmenu ctermbg=250 gui=bold
 highlight PMenu gui=bold guibg=#CECECE guifg=#444444
 
 " get rid of the underline for the cursorline
-hi CursorLine cterm=none term=none
+hi CursorLine cterm=none ctermbg=254 term=none

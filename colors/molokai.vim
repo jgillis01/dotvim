@@ -1,1 +1,1 @@
-vim-colors/colors/molokai.vim
+vim-colors/molokai/colors/molokai.vim
