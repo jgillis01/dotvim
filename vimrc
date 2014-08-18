@@ -48,12 +48,6 @@ set background=dark
 colorscheme molokai
 set cursorline
 
-" Indent guides settings
-"hi IndentGuidesOdd  ctermbg=white
-hi IndentGuidesEven ctermbg=darkgrey
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
-
 " Add dictionary completion
 set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 
@@ -116,12 +110,8 @@ nmap :W :w
 
 " Get rid of trailing whitespace
 nmap ,de :%s= *$==<cr>
-" Completion menu styling
-"highlight Pmenu ctermbg=250 gui=bold
-"highlight PMenu gui=bold guibg=#CECECE guifg=#444444
 
-" get rid of the underline for the cursorline
-"hi CursorLine cterm=none ctermbg=254 term=none
+" Airline settings
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tmuxline#enabled = 0
 
@@ -130,10 +120,7 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
-
 let g:rspec_command = "Dispatch rspec {spec}"
-
-map <Leader>n :NERDTreeToggle<CR>
 
 "Unite
 let g:unite_source_history_yank_enable = 1
@@ -164,3 +151,10 @@ let g:unite_source_grep_command='ag'
 let g:unite_source_grep_default_opts='--nocolor --nogroup -S -C4'
 let g:unite_source_grep_recursive_opt=''
 endif
+
+" Indent guides settings
+"hi IndentGuidesOdd  ctermbg=white
+hi IndentGuidesEven ctermbg=darkgrey
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+
